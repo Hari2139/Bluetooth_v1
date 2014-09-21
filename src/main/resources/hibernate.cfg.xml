@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- properties -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/public</property>
+		<property name="connection.username">root</property>
+        <property name="connection.password">passw0rd</property>
+<!--         <property name="default_catalog">PUBLIC</property> -->
+        <property name="default_schema">PUBLIC</property>
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="show_sql">true</property>
+<!--         <property name="format_sql">true</property> -->
+        <property name="hibernate.use_sql_comments">true</property>
+		<!--<property name="transaction.factory_class">org.hibernate.transaction.JTATransactionFactory</property> -->
+
+        <!-- mapping files -->
+        <mapping resource="hibernate/Transaction.hbm.xml"/>
+
+    </session-factory>
+</hibernate-configuration>

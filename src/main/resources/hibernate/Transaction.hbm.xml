@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+	<class name="com.hari.orm.TransactionBean" table="TRANSACTION">
+		<id name="sysid" type="int" column="SYS_ID">
+			<generator class="increment"/>
+		</id>		
+		<property name="blobType" column="BLOB_TYPE_STR" type="java.lang.String"></property>
+		<property name="blob" column="BLOB_DATA" type="java.sql.Blob"></property>
+		<property name="modifiedTimestamp" column="MODIFIED_TSTAMP" type="java.util.Date"></property>
+	</class>
+</hibernate-mapping>
